@@ -41,8 +41,8 @@ AllKnower maintains an embedded, in-process **LanceDB** database.
 
 ---
 
-## 2. Full-text keyword search (SQLite BM25)
-To retain proper nouns (such as character names, unique spells, or specific item titles) that vector approximations might miss, AllKnower queries AllCodex Core's SQLite Full-Text Search (FTS5) engine. This engine uses the **BM25 algorithm** to score notes by term frequency and inverse document frequency.
+## 2. Full-text keyword search (LanceDB FTS)
+To retain proper nouns (such as character names, unique spells, or specific item titles) that vector approximations might miss, AllKnower queries LanceDB's native Full-Text Search (FTS) index on the `content` column. This engine uses the **BM25 algorithm** to score chunks by term frequency and inverse document frequency.
 
 ---
 
